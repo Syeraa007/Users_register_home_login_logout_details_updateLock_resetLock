@@ -1,0 +1,16 @@
+{% extends 'main.html' %}
+{% load static %}
+
+{% block title %}
+<title>User details display page</title>
+{% endblock %}
+
+{% block body_block %}
+<center>
+    <h1>{{ UO.username }}</h1><br/>
+    <h1>{{ UO.email }}</h1><br/>
+    <h1>{{ PO.address }}</h1><br/>
+    <h1>{{ PO.picture.url }}</h1><br/>
+</center>
+
+{% endblock %}

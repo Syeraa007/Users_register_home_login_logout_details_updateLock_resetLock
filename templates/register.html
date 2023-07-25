@@ -1,0 +1,19 @@
+{% extends 'main.html' %}
+{% load static %}
+
+{% block title %}
+<title> Registration Page </title>
+{% endblock %}
+
+{% block body_block %}
+<center><br><br>
+    <form action="" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <table>
+            {{UFO.as_table}}
+            {{PFO.as_table}}
+        </table>
+        <input type="submit" value="Register">
+    </form>
+</center>
+{% endblock %}

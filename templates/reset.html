@@ -1,0 +1,23 @@
+{% extends 'main.html' %}
+{% load static %}
+
+{% block title %}
+<title>Home page</title>
+{% endblock %}
+
+{% block body_block %}
+<center>
+    <table>
+        <br><br>
+        <form action="" method="post">
+            {% csrf_token %}
+            <label for="username">Username : </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="text" name="username" id="username"><br><br>
+            <label for="password">Password : </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="password" name="password" id="password"><br><br>
+            <input type="submit" value="Reset Passcode">
+        </form>
+    </table>
+</center>
+
+{% endblock %}

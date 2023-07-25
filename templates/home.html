@@ -1,0 +1,17 @@
+{% extends 'main.html' %}
+{% load static %}
+
+{% block title %}
+<title>Home page</title>
+{% endblock %}
+
+{% block body_block %}
+<center>
+    {% if username %}
+        <h1> Hii,Welcome Mr/Ms {{username}}, This Is Your Home_Page  </h1>
+    {% else %}
+    <h1>Hii,Welcome This Is Home_Page</h1>
+    {% endif %}
+</center>
+
+{% endblock %}

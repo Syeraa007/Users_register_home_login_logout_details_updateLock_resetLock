@@ -1,0 +1,35 @@
+{% extends 'main.html' %}
+{% load static %}
+
+{% block title %}
+<title>Sign in page</title>
+<link rel="stylesheet" href="{% static 'css/signin.css' %}">
+{% endblock %}
+
+{% block body_block %}
+<center>
+    <div class="container">
+        <form action="" method="POST">{% csrf_token %}
+          <h1>Login</h1>
+          <div class="username t-input">
+            <input type="text" required="" name="user" id="user"
+            placeholder="." />
+            <label for="user">Username</label>
+            <div class="b-line"></div>
+          </div>
+          <div class="password t-input">
+            <input type="password" required="" id="pass" name="pass"
+            placeholder="." />
+            <label for="pass">Password</label>
+            <div class="b-line"></div>
+          </div>
+          <div class="check">
+            <input type="checkbox" name="os" id="ch1" />
+            <label for="ch1">Remember me</label>
+          </div>
+          <a href="{% url 'reset' %}">Forgotten Password?</a>
+          <button>Log in</button>
+        </form>
+      </div>
+</center>
+{% endblock %}
